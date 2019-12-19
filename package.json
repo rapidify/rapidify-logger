@@ -6,8 +6,7 @@
   "scripts": {
     "build": "node bin/build.js",
     "jsdoc": "jsdoc -r src",
-    "pretest": "npm run build",
-    "test": "./node_modules/.bin/mocha --exit tests"
+    "test": "node bin/test_runner.js"
   },
   "keywords": [
     "Microservice",
@@ -32,6 +31,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^6.7.2",
     "eslint-config-google": "^0.14.0",
+    "fastify": "^2.11.0",
     "jsdoc": "^3.6.3",
     "mocha": "^6.2.2",
     "shelljs": "^0.8.3"

@@ -1,3 +1,4 @@
 dist/
+tests_dist/
 .compiled/
 bin/
