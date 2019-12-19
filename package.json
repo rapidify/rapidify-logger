@@ -1,10 +1,13 @@
 {
-  "name": "@the-medicsoft/logger",
+  "name": "@rapidify/logger",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node bin/build.js",
+    "jsdoc": "jsdoc -r src",
+    "pretest": "npm run build",
+    "test": "./node_modules/.bin/mocha --exit tests"
   },
   "keywords": [
     "Microservice",
@@ -14,11 +17,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@the-medicsoft/webapi-framework": "git+https://github.com/the-medicsoft/webapi-framework.git#master"
+    "@the-medicsoft/webapi-framework": "git+https://github.com/the-medicsoft/webapi-framework.git#master",
+    "fastify-plugin": "^1.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "async": "^3.1.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chalk": "^3.0.0",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
-    "nodemon": "^1.19.4"
+    "eslint": "^6.7.2",
+    "eslint-config-google": "^0.14.0",
+    "jsdoc": "^3.6.3",
+    "mocha": "^6.2.2",
+    "shelljs": "^0.8.3"
   }
 }
