@@ -1,4 +1,3 @@
-import fp from 'fastify-plugin';
 import LoggerModel from './models/logger.model';
 import {HttpCode} from '@the-medicsoft/webapi-framework/lib/helpers';
 
@@ -27,7 +26,7 @@ async function responseLogger(server) {
 }
 
 // Logger Plugin
-export default fp((fastify, option, done) => {
+export default (fastify) => {
   requestLogger(fastify);
   responseLogger(fastify);
-});
+};

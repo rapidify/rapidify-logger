@@ -21,6 +21,7 @@
             "single"
         ],
         "require-jsdoc": "off",
-        "comma-dangle": "off"
+        "comma-dangle": "off",
+        "no-unused-vars": "warn"
     }
 }

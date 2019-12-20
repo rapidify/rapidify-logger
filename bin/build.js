@@ -18,7 +18,7 @@ async.waterfall([
 function eslint(next) {
     sh.echo(chalk.green('\nStep 1: Running eslint'));
     
-    if (sh.exec(`${cwd}/node_modules/.bin/eslint src`).code !== 0) {
+    if (sh.exec(`${cwd}/node_modules/.bin/eslint --fix src`).code !== 0) {
         sh.echo(chalk.redBright("eslint failed"));
     } else {
         sh.echo(chalk.green("eslint pass"));

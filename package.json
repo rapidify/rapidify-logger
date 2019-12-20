@@ -2,7 +2,7 @@
   "name": "@rapidify/logger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "logger.js",
   "scripts": {
     "build": "node bin/build.js",
     "jsdoc": "jsdoc -r src",
@@ -16,14 +16,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@the-medicsoft/webapi-framework": "git+https://github.com/the-medicsoft/webapi-framework.git#master",
-    "fastify-plugin": "^1.6.0"
+    "@the-medicsoft/webapi-framework": "git+https://github.com/the-medicsoft/webapi-framework.git#master"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "async": "^3.1.0",
+    "axios": "^0.19.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chalk": "^3.0.0",

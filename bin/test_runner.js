@@ -19,7 +19,7 @@ async.waterfall([
 function eslint(next) {
     sh.echo(chalk.green('\nStep 1: Running Eslint'));
 
-    if (sh.exec(`${cwd}/node_modules/.bin/eslint src`).code !== 0) {
+    if (sh.exec(`${cwd}/node_modules/.bin/eslint --fix src tests`).code !== 0) {
         sh.echo(chalk.redBright('eslint failed'));
     } else {
         sh.echo(chalk.green('eslint pass'));
@@ -41,5 +41,5 @@ function babel(next) {
 function testRunner() {
     sh.echo(chalk.green('\nStep 3: Running Tests'));
 
-    sh.exec(`${cwd}/node_modules/.bin/mocha --exit tests`);
+    sh.exec(`${cwd}/node_modules/.bin/mocha --exit --recursive --timeout 5000 tests`);
 }
