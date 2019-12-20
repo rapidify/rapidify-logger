@@ -1,5 +1,5 @@
 import LoggerModel from './models/logger.model';
-import {HttpCode} from '@the-medicsoft/webapi-framework/lib/helpers';
+import {HttpCode} from 'rapidify-core/lib/utils';
 
 async function requestLogger(server) {
   server.addHook('onRequest', (req, res, done) => {

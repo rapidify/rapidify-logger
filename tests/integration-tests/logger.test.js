@@ -2,7 +2,7 @@ const mocha = require('mocha');
 const chai = require('chai');
 const axios = require('axios');
 
-const {server} = require('@the-medicsoft/webapi-framework');
+const {server} = require('rapidify-core');
 const logger = require('../../dist/logger').default;
 
 logger(server);

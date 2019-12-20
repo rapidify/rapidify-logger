@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@the-medicsoft/webapi-framework": "git+https://github.com/the-medicsoft/webapi-framework.git#master"
+    "rapidify-core": "git+https://github.com/rapidify/rapidify-core.git#framework-restructuring"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",

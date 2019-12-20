@@ -1,10 +1,10 @@
 import {model} from 'mongoose';
-import {BaseModel} from '@the-medicsoft/webapi-framework';
+import {BaseModel} from 'rapidify-core';
 import LoggerSchema from '../schemas/logger.schema';
 
 class LoggerModel extends BaseModel {
   constructor() {
-    super(model('log', LoggerSchema));
+    super({Model: model('log', LoggerSchema)});
   }
 
   async createLog(req, res, payload) {
